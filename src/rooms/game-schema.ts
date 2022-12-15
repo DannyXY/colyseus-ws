@@ -44,12 +44,6 @@ export class GameRoom extends Room<State> {
         this.setState(new State());
 
         this.onMessage("move", (client, data) => {
-            // console.log(
-            //     "StateHandlerRoom received message from",
-            //     client.sessionId,
-            //     ":",
-            //     data
-            // );
             this.state.movePlayer(client.sessionId, data);
         });
     }
